@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fun Time!</title>
+  <style>
+    body {
+      background-color: #f3e5f5;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: #8e24aa;
+    }
+
+    .btn {
+      background-color: #ab47bc;
+      color: white;
+      padding: 15px 25px;
+      margin: 15px;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #6a1b9a;
+    }
+
+    #response {
+      font-size: 1.4em;
+      color: #4a148c;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Quick Quiz: Naomi Style!</h2>
+
+  <button class="btn" onclick="respond('Duh, obviously!')">Are you awesome?</button>
+  <button class="btn" onclick="respond('Absolutely. It’s science.')">Is Naomi the queen of vibes?</button>
+  <button class="btn" onclick="respond('You already know it.')">Who has the best laugh?</button>
+  <button class="btn" onclick="respond('Oops... All of the above!')">What’s the answer?</button>
+
+  <div id="response"></div>
+
+  <br><br>
+  <button class="btn" onclick="location.href='surprise.html'">Reveal Surprise</button>
+
+  <script>
+    function respond(text) {
+      document.getElementById('response').innerText = text;
+    }
+  </script>
+</body>
+</html>

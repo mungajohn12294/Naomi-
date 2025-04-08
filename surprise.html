@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Surprise!</title>
+  <style>
+    body {
+      background: #fffde7;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #f57c00;
+      font-size: 2.8em;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #5d4037;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      background-color: #ffb300;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .emoji {
+      position: absolute;
+      animation: float 5s linear infinite;
+      font-size: 2em;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Surprise Naomi!</h1>
+  <p>This is just a random bestie moment to tell you:</p>
+  <p><strong>You're awesome, hilarious, chaotic, and totally unforgettable.</strong></p>
+  <p>Now smile. That’s an order!</p>
+
+  <button onclick="location.reload()">Replay Surprise</button>
+
+  <script>
+    const emojis = ['⭐','🎉','💥','🤣','🧠','🦄','✨','❤️','😂'];
+    function dropEmojis() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.top = "100vh";
+      emoji.style.fontSize = (Math.random() * 20 + 20) + "px";
+      emoji.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 5000);
+    }
+
+    setInterval(dropEmojis, 300);
+  </script>
+</body>
+</html>

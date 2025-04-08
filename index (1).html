@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hey Naomi!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffecb3);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      animation: bg 10s infinite alternate;
+    }
+
+    @keyframes bg {
+      from { background-color: #fce4ec; }
+      to { background-color: #e8f5e9; }
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4081;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    p {
+      font-size: 1.3em;
+      margin: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff80ab;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+  <h1>Yo Naomi!</h1>
+  <p>Ready for a random, weird, sweet, chaotic surprise?</p>
+  <button onclick="location.href='fun.html'">Begin Adventure</button>
+</body>
+</html>
